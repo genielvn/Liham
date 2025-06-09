@@ -1,0 +1,92 @@
+@use "text" as *;
+@use "colors" as *;
+@use "button" as *;
+@use "textinput" as *;
+@use "checkbox" as *;
+
+* {
+    padding: 0px;
+    margin: 0px;
+    color: $black;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $light-pink;
+    width: 100%;
+    box-sizing: border-box;
+    @media (width <= 768px) {
+        padding: 10px 20px;
+    }
+    @media (width > 768px) {
+        padding: 10px calc(20% + 20px);
+    }
+}
+
+body {
+    min-height: 100dvh;
+    background-color: $white;
+}
+
+main {
+    @media (width <= 768px) {
+        padding: 20px;
+    }
+    @media (width > 768px) {
+        padding: 20px;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+
+label {
+    font-weight: 600;
+    font-size: 1em;
+}
+
+li {
+    margin-left: 20px;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+.margin-top-5 {
+    margin-top: 10px;
+}
+
+.margin-left-5 {
+    margin-left: 10px;
+}
+
+.margin-right-5 {
+    margin-right: 5px;
+}
+
+.margin-bottom-5 {
+    margin-bottom: 5px;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.subheader {
+    font-size: 0.75em;
+    font-style: italic;
+}
+
+.right {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}

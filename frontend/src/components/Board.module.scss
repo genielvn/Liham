@@ -1,0 +1,19 @@
+@use "../../styles/colors" as *;
+
+.board {
+    background-color: $light-pink;
+    outline: 2px $pink solid;
+    border-radius: 15px;
+    padding: 16px 20px;
+    margin: 10px 0px;
+}
+
+.board__name {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.board__description {
+    font-size: 1em;
+    font-style: italic;
+}

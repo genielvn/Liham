@@ -1,0 +1,85 @@
+.thread__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    overflow: visible;
+    word-wrap: break-word;
+}
+
+.thread__nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.thread__nav button{
+    flex-shrink: 0;
+}
+
+.thread__subheader {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.thread__title {
+    font-weight: 600;
+    overflow: visible;
+    word-wrap: break-word;
+    max-width: 90%;
+    box-sizing: border-box;
+}
+
+.thread__details {
+    font-size: 0.75em;
+    padding-bottom: 10px;
+}
+
+.thread__text {
+    font-size: 1em;
+    overflow: visible;
+    word-wrap: break-word;
+}
+
+.thread__image {
+    margin: 10px 0;
+    width: 50%;
+}
+
+.thread__dropdown {
+    position: relative;
+}
+.thread__dropdown_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffb8de;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+}
+
+.thread__dropdown_menu {
+    position: absolute;
+    top: 150%;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.thread__dropdown_item {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #0f0f0f;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: #ffb8de;
+    }
+}

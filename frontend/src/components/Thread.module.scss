@@ -1,0 +1,44 @@
+@use "../../styles/colors" as *;
+
+.thread {
+    background-color: $light-pink;
+    padding: 10px;
+    margin: 5px 0px;
+   
+}
+
+.thread__alt {
+    background-color: $light-pink-2;
+}
+
+.thread:nth-child(even) {
+    background-color: $dark-pink;
+
+}
+
+.thread__title {
+    font-size: 1em;
+    font-weight: 600;
+    overflow: visible;
+    word-wrap: break-word;
+}
+
+.thread__details {
+    font-size: 0.75em;
+    font-style: italic;
+    padding-bottom: 10px;
+}
+
+.thread__board {
+    font-size: 0.75em;
+    font-style: italic;
+}
+
+.thread__text {
+    font-size: 1em;
+    overflow: visible;
+    word-wrap: break-word;
+}
+.thread__image {
+    width: 35%;
+}

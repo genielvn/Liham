@@ -1,0 +1,53 @@
+@use "../../styles/colors" as *;
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 70%;
+}
+
+.menu__list {
+    font-weight: 600;
+    text-decoration: none;
+    color: $black;
+}
+
+.account {
+    color: $black;
+    font-size: 1.75em;
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: absolute;
+    top: 150%; // Dropdown below the icon
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    z-index: 1000;
+    padding: 0.5rem;
+}
+
+.dropdown__item {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #0f0f0f;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: $light-pink;
+    }
+}
+
+.dropdown__logout {
+    &:hover {
+        background-color: $red;
+        color: $white;
+    }
+}

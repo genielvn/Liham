@@ -1,0 +1,13 @@
+.new_replies__input_divider {
+    margin: 12px 0px;
+}
+.new_replies__input_divider_flexrow {
+    display: flex;
+    flex-direction: row;
+    margin: 12px 0px;
+    gap: 10px;
+}
+
+.new_replies__input_divider label {
+    display: block;
+}

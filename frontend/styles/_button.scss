@@ -1,0 +1,93 @@
+@use "colors" as *;
+@use "text" as *;
+
+button {
+    font-family: inherit;
+    font-size: $normal-size;
+    font-weight: 600;
+    border: 0px;
+    border-radius: 40px;
+    box-sizing: border-box;
+    margin: 5px;
+}
+
+button.btn-large {
+    padding: 15px 24px;
+    min-width: 100px;
+}
+
+button.btn-small {
+    padding: 8px 15px;
+    min-width: 80px;
+}
+
+button.btn-large-no-min {
+    padding: 15px 24px;
+}
+
+button.btn-small-no-min {
+    padding: 8px 15px;
+}
+
+button.btn-full-width {
+    padding: 15px 24px;
+    min-width: 100%;
+}
+
+button.btn-half {
+    padding: 15px 24px;
+    min-width: 50%;
+}
+
+button.btn-pink {
+    outline: 2px $pink solid;
+    background-color: $light-pink;
+}
+
+button.btn-red {
+    outline: 2px $red solid;
+    background-color: $light-red;
+}
+
+button.btn-yellow {
+    outline: 2px $yellow solid;
+    background-color: $light-yellow;
+}
+
+button.btn-green {
+    outline: 2px $green solid;
+    background-color: $light-green;
+}
+
+button.btn-blue {
+    outline: 2px $blue solid;
+    background-color: $light-blue;
+}
+
+button.btn-gray {
+    outline: 2px $black solid;
+    background-color: $gray;
+}
+
+button.btn-solid-pink {
+    outline: 2px $pink solid;
+    background-color: $pink;
+}
+
+button.btn-solid-red {
+    outline: 2px $red solid;
+    background-color: $red;
+    color: $white;
+}
+
+button.btn-hollow-pink {
+    outline: 2px $pink solid;
+    background-color: none;
+    color: $pink;
+}
+
+button.btn-hollow-red {
+    outline: 2px $red solid;
+    background-color: none;
+    color: $red;
+}

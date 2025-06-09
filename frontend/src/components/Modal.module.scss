@@ -1,0 +1,53 @@
+@use "../../styles/colors" as *;
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modal__window {
+    background-color: $white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    border-radius: 16px;
+}
+
+.modal__title {
+    border-radius: inherit;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 16px 16px 0px 0px;
+    padding: 16px;
+}
+
+.warning {
+    background-color: $red;
+    color: $white;
+}
+
+.confirm {
+    background-color: $light-pink;
+    color: $black;
+}
+
+.modal__content {
+    margin: 16px;
+    font-size: 1rem;
+}
+
+.modal__actions {
+    margin: 16px;
+    display: flex;
+    justify-content: flex-end;
+}

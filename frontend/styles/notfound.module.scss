@@ -1,0 +1,16 @@
+.notFound {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 90dvh;
+    align-items: center;
+    justify-content: center;
+    box-sizing: con-box;
+    margin: 0 30px;
+}
+
+.notFound__button_div {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,62 @@
+.account__div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: con-box;
+    margin: 0 30px;
+    min-height: 100dvh;
+    @media (width <= 768px) {
+        flex-direction: column;
+    }
+    @media (width > 768px) {
+        flex-direction: row;
+    }
+}
+.account__first_half {
+    @media (width > 768px) {
+        display: flex;
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+    }
+    @media (width <= 768px) {
+        position: absolute;
+        top: 30%
+    }
+}
+
+.account__second_half {
+    @media (width <= 768px) {
+        position: absolute;
+        bottom: 50px;
+        width: 100%;
+    }
+    @media (width > 768px) {
+        width: 50%;
+    }
+}
+
+.account__introduction {
+    margin-bottom: 30px;
+}
+
+.account__introduction h1 {
+    @media (width <= 768px) {
+        font-size: 3rem;
+    }
+    @media (width > 768px) {
+        font-size: 4rem;
+    }
+    font-weight: 700;
+}
+
+.account__introduction p {
+    @media (width <= 768px) {
+        
+    }
+    @media (width > 768px) {
+        font-size: 1.5rem;
+    }
+    font-weight: 400;
+}
