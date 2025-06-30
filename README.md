@@ -4,13 +4,41 @@ A web-based platform designed to foster open, respectful, and meaningful discuss
 ![Overview](https://github.com/user-attachments/assets/9e22839c-ae0e-496a-bc12-5f36ca1360e2)
 
 ## Tech Stack
-- **Frontend:** Next.js, SaaS
+- **Frontend:** Next.js, Saas
 - **Backend:** Django + Django REST Framework
 - **Database:** SQLite 
 
 ## Developing
-== I'll add here ==
 
+### Frontend
+
+Ensure you have [Node.js](https://nodejs.org/en) and [npm](https://www.npmjs.com/) installed on your system.
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+### Backend
+
+Ensure you have **Python 3.12** installed.
+
+1. Install the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Set up the Django app:
+   ```bash
+   python manage.py makemigrations
+   python manage.py migrate
+   python manage.py runserver
+   ```
 ## Features
 
 - **Feed:** See latest discussion across every board!~
