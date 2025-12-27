@@ -39,7 +39,7 @@ const UserThread: React.FC<ThreadProps> = ({
                 {img_upload && (
                     <div className={style.thread__image}>
                         <Image
-                            src={`http://127.0.0.1:8000${img_upload}`}
+                            src={`http://backend:8000${img_upload}`}
                             alt="Thread Image"
                             layout="responsive"
                             width={400}

@@ -219,7 +219,7 @@ export default function Thread({ params }: ThreadProps) {
                 {data?.thread.img_upload && (
                     <div className={style.thread__image}>
                         <Image
-                            src={`http://127.0.0.1:8000${data.thread.img_upload}`}
+                            src={`http://backend:8000${data.thread.img_upload}`}
                             alt="Thread Image"
                             layout="responsive"
                             width={400}

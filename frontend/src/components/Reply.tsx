@@ -56,8 +56,8 @@ const Reply: React.FC<ReplyProps> = ({
                     >
                         {author}
                     </Link>
-                )}
-                {" "}• {relativeTime}
+                )}{" "}
+                • {relativeTime}
                 {(current_user === author || is_admin) && (
                     <span
                         className={style.reply__deleteButton}
@@ -73,7 +73,7 @@ const Reply: React.FC<ReplyProps> = ({
             {img_upload && (
                 <div className={style.reply__image}>
                     <Image
-                        src={`http://127.0.0.1:8000${img_upload}`}
+                        src={`http://backend:8000${img_upload}`}
                         alt="reply"
                         layout="responsive"
                         height={400}

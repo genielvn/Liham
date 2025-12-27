@@ -132,7 +132,7 @@ export default function UserYou() {
                                         profilePreview
                                             ? profilePreview
                                             : data?.user.profile_picture
-                                            ? `http://127.0.0.1:8000${data?.user.profile_picture}`
+                                            ? `http://backend:8000${data?.user.profile_picture}`
                                             : icon
                                     }
                                     alt="Profile Picture"
@@ -180,7 +180,7 @@ export default function UserYou() {
                                         bannerPreview
                                             ? bannerPreview
                                             : data?.user.profile_banner
-                                            ? `http://127.0.0.1:8000${data?.user.profile_banner}`
+                                            ? `http://backend:8000${data?.user.profile_banner}`
                                             : banner
                                     }
                                     alt="Profile Banner"

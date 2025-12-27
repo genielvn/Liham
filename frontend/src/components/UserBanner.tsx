@@ -15,7 +15,7 @@ export default function UserBanner({ data }: UserBannerProps) {
             <Image
                 src={
                     data?.profile_banner
-                        ? `http://127.0.0.1:8000${data?.profile_banner}`
+                        ? `http://backend:8000${data?.profile_banner}`
                         : banner
                 }
                 className={style.banner__cover}
@@ -28,14 +28,13 @@ export default function UserBanner({ data }: UserBannerProps) {
                 <Image
                     src={
                         data?.profile_picture
-                            ? `http://127.0.0.1:8000${data?.profile_picture}`
+                            ? `http://backend:8000${data?.profile_picture}`
                             : icon
                     }
                     height={120}
                     width={120}
                     alt="profile-pic"
                     className={style.banner__image}
-                    
                 ></Image>
                 <div className={style.banner__text}>
                     <div className={style.banner__text_user}>

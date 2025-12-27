@@ -14,7 +14,7 @@ interface ThreadProps {
     replyCount: number;
     updated_at: string;
     img_upload: string | null;
-    index: number
+    index: number;
 }
 
 const Thread: React.FC<ThreadProps> = ({
@@ -34,7 +34,8 @@ const Thread: React.FC<ThreadProps> = ({
 
     const limitedText = text.length > 200 ? `${text.slice(0, 200)}...` : text;
 
-    const styleToUse = index % 2 === 0 ? style.thread : `${style.thread} ${style.thread__alt}`
+    const styleToUse =
+        index % 2 === 0 ? style.thread : `${style.thread} ${style.thread__alt}`;
 
     return (
         <Link href={`/b/${board}/${id}`} style={{ textDecoration: "none" }}>
@@ -49,7 +50,7 @@ const Thread: React.FC<ThreadProps> = ({
                 {img_upload && (
                     <div className={style.thread__image}>
                         <Image
-                            src={`http://127.0.0.1:8000${img_upload}`}
+                            src={`http://backend:8000${img_upload}`}
                             alt="Thread Image"
                             layout="responsive"
                             width={400}

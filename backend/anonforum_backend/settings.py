@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-a9gp226qv25hzzb--_!al2mb4*x!(+h2#5i)sch7j%yus2$2n-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost",'127.0.0.1']
+ALLOWED_HOSTS = ["localhost",'127.0.0.1', "backend"]
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # Allow your Next.js frontend
@@ -97,7 +97,7 @@ WSGI_APPLICATION = 'anonforum_backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / "db" / 'db.sqlite3',
     }
 }
 
@@ -137,7 +137,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-MEDIA_URL = '/media/'
+MEDIA_URL = '/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 
