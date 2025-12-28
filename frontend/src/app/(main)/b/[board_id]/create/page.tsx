@@ -26,7 +26,7 @@ export default function CreateThread({ params }: CreateThreadProps) {
                 if (response.data.user.is_banned) {
                     setError(true);
                 }
-            } catch (error) {
+            } catch {
                 setError(true);
             }
         };
@@ -35,11 +35,11 @@ export default function CreateThread({ params }: CreateThreadProps) {
                 const response = await getBoard(board_id);
                 setData(response.data);
                 console.log(response.data);
-            } catch (error) {
+            } catch {
                 setError(true);
             }
         };
-        
+
         fetchBanned();
         fetchBoard();
     }, []);

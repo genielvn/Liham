@@ -15,7 +15,7 @@ export default function Feed() {
             try {
                 const response = await getFeed();
                 setData(response.data);
-            } catch (error) {
+            } catch {
                 setError(true);
             }
         };

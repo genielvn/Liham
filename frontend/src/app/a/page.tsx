@@ -4,7 +4,6 @@ import Image from "next/image";
 import style from "./page.module.scss";
 import Logo from "@/public/logo.png";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 
 export default function Account() {
     const router = useRouter();

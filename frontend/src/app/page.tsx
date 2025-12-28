@@ -17,7 +17,7 @@ const HomePage = () => {
 
         const verify = async () => {
             try {
-                const response = await verifyToken();
+                await verifyToken();
                 router.push("/b");
             } catch (error) {
                 console.error("Error verifying token:", error);

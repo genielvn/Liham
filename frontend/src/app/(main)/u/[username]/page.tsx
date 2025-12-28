@@ -23,7 +23,7 @@ export default function UserOthers({ params }: UserProps) {
             try {
                 const response = await getUserData(username);
                 setData(response.data);
-            } catch (error) {
+            } catch {
                 setError(true);
             }
         };
@@ -41,7 +41,7 @@ export default function UserOthers({ params }: UserProps) {
 
     const handleBanUser = async () => {
         try {
-            const response = await banUser(username);
+            await banUser(username);
             alert("Toggle ban successfully done");
             window.location.reload();
         } catch (error) {

@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 import style from "@styles/notfound.module.scss";
 import Image from "next/image";
 import NotFound from "@/public/404.png";
-import Cookies from "js-cookie";
 
 const quote404 = [
     "Maybe the real page was the friends we made along the way...",
@@ -39,7 +38,7 @@ export default function Custom404() {
                     className="btn-full-width btn-solid-pink"
                     onClick={goHome}
                 >
-                    Let's go back...
+                    {"Let's go back..."}
                 </button>
             </div>
         </div>

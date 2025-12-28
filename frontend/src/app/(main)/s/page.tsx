@@ -19,6 +19,7 @@ import { Modal } from "@/components/Modal";
 
 export default function UserYou() {
     const [data, setData] = useState<UserBoardThreadData | null>(null);
+    const [showModal, setShowModal] = useState(false);
     const [error, setError] = useState(false);
 
     useEffect(() => {
@@ -27,7 +28,7 @@ export default function UserYou() {
                 const response = await getSelfUserData();
                 setData(response.data);
                 console.log(response.data);
-            } catch (error) {
+            } catch {
                 setError(true);
             }
         };
@@ -52,7 +53,7 @@ export default function UserYou() {
         formData.append("profile_picture", profilePicture);
 
         try {
-            const response = await uploadProfilePicture(formData);
+            await uploadProfilePicture(formData);
             console.log("Profile picture uploaded successfully.");
             window.location.reload();
         } catch (error) {
@@ -73,7 +74,7 @@ export default function UserYou() {
         formData.append("profile_banner", profileBanner);
 
         try {
-            const response = await uploadProfileBanner(formData);
+            await uploadProfileBanner(formData);
             console.log("Profile banner uploaded successfully.");
             window.location.reload();
         } catch (error) {
@@ -93,7 +94,7 @@ export default function UserYou() {
         if (!confirmation) return;
 
         try {
-            const response = await deleteAccount();
+            await deleteAccount();
             alert("Your account has been deleted successfully.");
             Cookies.remove("token");
             window.location.href = "/a";
@@ -109,8 +110,6 @@ export default function UserYou() {
     if (error) {
         return notFound();
     }
-
-    const [showModal, setShowModal] = useState(false);
 
     return (
         data && (

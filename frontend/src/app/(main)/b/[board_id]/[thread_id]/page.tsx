@@ -42,7 +42,7 @@ export default function Thread({ params }: ThreadProps) {
             try {
                 const response = await getThread(board_id, thread_id);
                 setData(response.data);
-            } catch (error) {
+            } catch {
                 setError(true);
             }
         };
@@ -60,7 +60,7 @@ export default function Thread({ params }: ThreadProps) {
                 setIsBanned(response.data.user.is_banned);
                 setIsAdmin(response.data.user.is_admin);
                 setCurrentUser(response.data.user.username);
-            } catch (error) {
+            } catch {
                 setError(true);
             }
         };
@@ -111,7 +111,7 @@ export default function Thread({ params }: ThreadProps) {
         try {
             await deleteThread(board_id, thread_id);
             window.location.href = `/b/${board_id}`;
-        } catch (error) {
+        } catch {
             alert("Something went wrong. Please try again.");
         } finally {
             setIsModalOpen(false);

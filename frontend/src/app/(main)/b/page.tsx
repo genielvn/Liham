@@ -13,18 +13,16 @@ export default function Boards() {
     useEffect(() => {
         const fetchBoards = async () => {
             try {
-                const response = await getBoards()
-                setData(response.data)
-            } catch (error)
-            {
-                setError(true)
+                const response = await getBoards();
+                setData(response.data);
+            } catch {
+                setError(true);
             }
-        }
+        };
         fetchBoards();
-    }, [])
-    
+    }, []);
 
-    if (error) return notFound()
+    if (error) return notFound();
     return (
         <>
             {data.length !== 0 && (

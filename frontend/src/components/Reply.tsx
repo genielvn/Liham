@@ -36,7 +36,7 @@ const Reply: React.FC<ReplyProps> = ({
         try {
             await deleteReply(id);
             window.location.reload();
-        } catch (err) {
+        } catch {
             alert("An error occurred. Please try again.");
         }
     };

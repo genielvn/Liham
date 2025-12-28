@@ -7,7 +7,6 @@ import style from "./page.module.scss";
 import { BoardThreadListData } from "@/types/boardthread";
 import { getSelfUserData, getThreads } from "@/services/api";
 import { useEffect, useState } from "react";
-import { set } from "date-fns";
 
 interface ThreadListProps {
     params: {
@@ -26,7 +25,7 @@ export default function ThreadList({ params }: ThreadListProps) {
             try {
                 const response = await getThreads(board_id);
                 setData(response.data);
-            } catch (error) {
+            } catch {
                 setError(true);
             }
         };
@@ -34,7 +33,7 @@ export default function ThreadList({ params }: ThreadListProps) {
             try {
                 const response = await getSelfUserData();
                 setIsBanned(response.data.user.is_banned);
-            } catch (error) {
+            } catch {
                 setError(true);
             }
         };

@@ -36,18 +36,14 @@ export default function AccountSignUp() {
         }
 
         try {
-            const response = await signUpUser(
-                username,
-                password,
-                email,
-                university
-            );
+            await signUpUser(username, password, email, university);
             router.push("/f");
-        } catch (error: any) {
-            setErrorMessage(
-                error.response?.data?.error ||
-                    "Something went wrong. Please try again."
-            );
+        } catch (error) {
+            const message =
+                error instanceof Error
+                    ? error.message
+                    : "Something went wrong. Please try again.";
+            setErrorMessage(message);
         }
     };
 

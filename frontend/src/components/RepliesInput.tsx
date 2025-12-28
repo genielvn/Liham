@@ -33,7 +33,7 @@ const RepliesInput: React.FC<ReplyInputProps> = ({ board_id, thread_id }) => {
         formData.append("anonymous", isAnonymous ? "true" : "false"); // Include the anonymous state
 
         try {
-            const response = await createReply(board_id, thread_id, formData);
+            await createReply(board_id, thread_id, formData);
             setMessage("Reply successfully posted!");
             window.location.reload();
         } catch (err) {

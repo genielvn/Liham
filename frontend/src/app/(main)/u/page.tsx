@@ -16,7 +16,7 @@ export default function UserYou() {
             try {
                 const response = await getSelfUserData();
                 setData(response.data);
-            } catch (error) {
+            } catch {
                 setError(true);
             }
         };

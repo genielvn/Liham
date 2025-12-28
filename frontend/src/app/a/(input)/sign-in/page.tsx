@@ -13,12 +13,14 @@ export default function AccountSignIn() {
     const handleSignInSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
         setErrorMessage("");
-    
+
         try {
-            const response = await loginUser(username, password);
+            await loginUser(username, password);
             router.push("/f");
-        } catch (error: any) {
-            setErrorMessage(error.response?.data?.error || "Invalid credentials.");
+        } catch (error) {
+            setErrorMessage(
+                error instanceof Error ? error.message : "Invalid credentials."
+            );
         }
     };
 
